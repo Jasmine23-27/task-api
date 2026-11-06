@@ -22,7 +22,7 @@ export const validateTask = [
 export const validateTaskQuery = [
   query('completed')
     .optional()
-    .isBoolean({ strict: true })
+    .isIn(['true', 'false'])
     .withMessage('completed must be true or false'),
 
   checkValidationResults,
